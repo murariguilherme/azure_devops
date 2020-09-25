@@ -17,6 +17,6 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '${agent.builddirectory}/s/src/AzureDevOps.Application/bin/Release/netcoreapp3.1/AzureDevOps.Application.dll'
+    SourceFolder: '$(agent.builddirectory)/s/src/AzureDevOps.Application/bin/Release/netcoreapp3.1/AzureDevOps.Application.dll'
     Contents: '**'
-    TargetFolder: '${build.artifactstagingdirectory}/appdir'
+    TargetFolder: '$(build.artifactstagingdirectory)/appdir'
