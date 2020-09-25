@@ -19,4 +19,4 @@ steps:
   inputs:
     SourceFolder: '${agent.builddirectory}/s/src/AzureDevOps.Application/bin/Release/netcoreapp3.1/AzureDevOps.Application.dll'
     Contents: '**'
-    TargetFolder: '${agent.builddirectory}/appdir'
+    TargetFolder: '${build.artifactstagingdirectory}/appdir'
