@@ -20,3 +20,9 @@ steps:
     SourceFolder: '$(agent.builddirectory)/s/src/AzureDevOps.Application/bin/Release/netcoreapp3.1/AzureDevOps.Application.dll'
     Contents: '**'
     TargetFolder: '$(build.artifactstagingdirectory)/appdir'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
